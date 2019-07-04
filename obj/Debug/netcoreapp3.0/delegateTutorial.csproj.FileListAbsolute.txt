@@ -1,0 +1,15 @@
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/delegateTutorial
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/delegateTutorial.deps.json
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/delegateTutorial.runtimeconfig.json
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/delegateTutorial.runtimeconfig.dev.json
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/delegateTutorial.dll
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/delegateTutorial.pdb
+/Users/frankhsu/Desktop/測試/delegateTutorial/obj/Debug/netcoreapp3.0/delegateTutorial.csprojAssemblyReference.cache
+/Users/frankhsu/Desktop/測試/delegateTutorial/obj/Debug/netcoreapp3.0/delegateTutorial.csproj.CoreCompileInputs.cache
+/Users/frankhsu/Desktop/測試/delegateTutorial/obj/Debug/netcoreapp3.0/delegateTutorial.AssemblyInfoInputs.cache
+/Users/frankhsu/Desktop/測試/delegateTutorial/obj/Debug/netcoreapp3.0/delegateTutorial.AssemblyInfo.cs
+/Users/frankhsu/Desktop/測試/delegateTutorial/obj/Debug/netcoreapp3.0/delegateTutorial.dll
+/Users/frankhsu/Desktop/測試/delegateTutorial/obj/Debug/netcoreapp3.0/delegateTutorial.pdb
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/frankhsu/Desktop/測試/delegateTutorial/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/frankhsu/Desktop/測試/delegateTutorial/obj/Debug/netcoreapp3.0/delegateTutorial.csproj.CopyComplete
