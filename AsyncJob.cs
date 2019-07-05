@@ -35,10 +35,10 @@ namespace delegateTutorial
                 Task task = Task.Run(()=>{
                     return d.DynamicInvoke(2, 5);
                 }).ContinueWith(result => _callBack.OnComplete(result.Result));
-                List.Add(task);
-                // yield return task;
+                // List.Add(task);
+                yield return task;
             }
-            return List;
+            // return List;
         }
 
         private void Print(IEventArgs arg) => Console.WriteLine(arg.Value?.ToString());

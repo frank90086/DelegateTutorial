@@ -1,0 +1,11 @@
+# obj file
+obj/
+
+# bin file
+bin/
+
+# vscode setting file
+.vscode/
+
+# log file
+logs/*.log

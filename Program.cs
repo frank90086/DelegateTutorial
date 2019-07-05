@@ -17,11 +17,13 @@ namespace delegateTutorial
             var cal = service.GetRequiredService<ICalCulation>();
             var callBack = service.GetRequiredService<ICallBackEvent>();
             var asyncJob = service.GetRequiredService<IAsyncJob>();
+            var tasks = new List<Task>();
 
             Console.WriteLine("Client application started!");
             Thread.CurrentThread.Name = "Main | Thread";
 
-            var tasks = asyncJob.Do() as List<Task>;
+            foreach (var t in asyncJob.Do())
+                tasks.Add(t);
 
             for (int i = 1; i <= 3; i++) {
                 Thread.Sleep(TimeSpan.FromSeconds(1));
