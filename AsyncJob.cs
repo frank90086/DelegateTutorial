@@ -9,13 +9,12 @@ namespace delegateTutorial
         IEnumerable<Task> Do();
     }
 
-    public delegate int DelegateJob(int x, int y);
+    public delegate  (int Result, string MethodName) DelegateJob(int x, int y);
 
     public class AsyncJob : IAsyncJob
     {
         private readonly ICalCulation _cal;
         private readonly ICallBackEvent _callBack;
-        public List<Task> List = new List<Task>();
         public AsyncJob(ICalCulation cal, ICallBackEvent callBack)
         {
             _cal = cal;
@@ -33,14 +32,21 @@ namespace delegateTutorial
             foreach (var d in del.GetInvocationList())
             {
                 Task task = Task.Run(()=>{
-                    return d.DynamicInvoke(2, 5);
-                }).ContinueWith(result => _callBack.OnComplete(result.Result));
-                // List.Add(task);
+                    return (d as DelegateJob)(2, 5);
+                }).ContinueWith(back => {
+                    var (result, methodName) = back.Result;
+                    _callBack.OnComplete(new { Result = result, MethodName = methodName});
+                });
                 yield return task;
             }
-            // return List;
         }
 
-        private void Print(IEventArgs arg) => Console.WriteLine(arg.Value?.ToString());
+        private void Print(IEventArgs arg)
+        {
+            if (arg.Model != null)
+                Console.WriteLine($"{arg.Model.MethodName} Result : {arg.Model.Result}!");
+            else
+                Console.WriteLine($"The Result : {arg.Obj.ToString()}!");
+        }
     }
 }
