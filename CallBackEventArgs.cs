@@ -4,21 +4,30 @@ namespace delegateTutorial
 {
     public interface IEventArgs
     {
-        object Value{ get; set; }
+        object Obj{ get; }
+        ResultModel Model{ get; }
     }
 
     public class CallBackEventArgs : EventArgs, IEventArgs
     {
         private object _obj;
+        private ResultModel _model;
         public CallBackEventArgs(object obj)
         {
             _obj = obj;
+            _model = obj as ResultModel;
         }
 
-        public Object Value
+        public Object Obj
         {
             get => _obj;
-            set => _obj = value;
+            private set {}
+        }
+
+        public ResultModel Model
+        {
+            get => _model;
+            private set {}
         }
     }
 }

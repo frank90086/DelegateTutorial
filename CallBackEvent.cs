@@ -18,7 +18,7 @@ namespace delegateTutorial
             CallBackEventArgs args = new CallBackEventArgs(result);
             if (CallBack != null)
                 CallBack(args);
-            Console.WriteLine($"End With OnAddComplete!");
+            Console.WriteLine($"End With OnComplete!");
         }
     }
 }
