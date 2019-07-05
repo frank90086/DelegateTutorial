@@ -32,7 +32,8 @@ namespace delegateTutorial
             foreach (var d in del.GetInvocationList())
             {
                 Task task = Task.Run(()=>{
-                    return (d as DelegateJob)(2, 5);
+                    Random rm = new Random();
+                    return (d as DelegateJob)(rm.Next(1, 100), rm.Next(1, 100));
                 }).ContinueWith(back => {
                     var (result, methodName) = back.Result;
                     _callBack.OnComplete(new { Result = result, MethodName = methodName});
