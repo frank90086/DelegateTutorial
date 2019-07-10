@@ -17,6 +17,7 @@ namespace delegateTutorial
             var cal = service.GetRequiredService<ICalCulation>();
             var callBack = service.GetRequiredService<ICallBackEvent>();
             var asyncJob = service.GetRequiredService<IAsyncJob>();
+            var operation = service.GetRequiredService<IRabbitOperation>();
             var tasks = new List<Task>();
 
             Console.WriteLine("Client application started!");
@@ -32,8 +33,10 @@ namespace delegateTutorial
 
             Task.WaitAll(tasks.ToArray());
 
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadLine();
+            Console.WriteLine("Please Press Anything You Want To Send: ");
+            operation.Start();
+
+            Console.WriteLine("Exiting...");
         }
     }
 }
