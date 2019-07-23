@@ -33,6 +33,12 @@ namespace delegateTutorial
 
             Task.WaitAll(tasks.ToArray());
 
+<<<<<<< HEAD
+=======
+            var mongo = new MongodbContext();
+            mongo.Insert();
+
+>>>>>>> e2de260
             Console.WriteLine("Please Press Anything You Want To Send: ");
             operation.Start();
 
